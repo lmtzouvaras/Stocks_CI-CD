@@ -1,2 +1,3 @@
-file=open('random.csv', 'w', newline='')
-file=close('university_records.csv', 'w', newline='')
+with open('random.csv', 'w', newline='') as file:
+  pass
+
