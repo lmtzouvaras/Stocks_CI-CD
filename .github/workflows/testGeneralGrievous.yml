@@ -49,6 +49,11 @@ jobs:
         name: testplan-report
         path: TestReports/
 
+    - name: Configure Git user
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
     - name: Commit and push Testplan report to reports branch
       run: |
         git checkout -b reports || git checkout reports
