@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        
+
     - uses: actions/checkout@v4
     - name: Set up Python 3.13.5
       uses: actions/setup-python@v3
@@ -44,7 +44,7 @@ jobs:
         python ./PythonApps/test_GeneralGrievous.py --pdf ./TestReports/test_Grievous.pdf
 
     - name: Upload Testplan report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: testplan-report
         path: TestReports/
