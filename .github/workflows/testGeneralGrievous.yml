@@ -36,4 +36,8 @@ jobs:
       run: |
         mkdir -p ./TestReports
         python ./PythonApps/test_GeneralGrievous.py --pdf-report ./TestReports/test_Grievous.pdf
-        
+    - name: Upload Testplan report
+      uses: actions/upload-artifact@v3
+      with:
+        name: testplan-report
+        path: testplan_reports/
