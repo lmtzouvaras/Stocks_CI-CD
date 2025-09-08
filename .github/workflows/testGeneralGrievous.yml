@@ -34,7 +34,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test General Grievous App
       run: |
-        mkdir -p ./TestReports
         python ./PythonApps/test_GeneralGrievous.py --pdf-report ./TestReports/test_Grievous.pdf
     - name: Upload Testplan report
       uses: actions/upload-artifact@v3
