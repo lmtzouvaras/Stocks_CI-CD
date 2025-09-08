@@ -54,11 +54,11 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    - name: Commit and push Testplan report to reports branch
+    - name: Commit and push Testplan report to main branch
       run: |
-        git checkout -b reports || git checkout reports
+        git checkout main
         git add TestReports/
         git diff --cached --quiet || git commit -m "Add latest Testplan report"
-        git push --set-upstream origin reports --force
+        git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
