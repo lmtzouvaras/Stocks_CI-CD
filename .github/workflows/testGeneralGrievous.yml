@@ -48,3 +48,12 @@ jobs:
       with:
         name: testplan-report
         path: TestReports/
+
+    - name: Commit and push Testplan report to reports branch
+      run: |
+        git checkout -b reports || git checkout reports
+        git add TestReports/
+        git diff --cached --quiet || git commit -m "Add latest Testplan report"
+        git push --set-upstream origin reports --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
