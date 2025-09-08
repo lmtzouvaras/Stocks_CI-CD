@@ -13,3 +13,6 @@ class GeneralGrievousTests:
 @test_plan(name="General Grievous Test Plan")
 def main(plan):
     plan.add(MultiTest(name="General Grievous Tests", suites=[GeneralGrievousTests()]))
+
+if __name__ == "__main__":
+    main()
